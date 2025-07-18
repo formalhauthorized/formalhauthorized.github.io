@@ -1,52 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-        <loc>/en/posts/books/for-english-learner/the-elements-of-style/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/sections/dev/posts/rust/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/en/posts/books/for-english-learner/the-velveteen-rabbit/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/sections/dev/posts/solana/basics/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/en/posts/books/for-german-learner/maerchen-und-erzaehlungen1/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/sections/dev/posts/solidity/basics/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/en/posts/books/for-german-learner/studien-und-plaudereien/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/sections/etc/posts/games/snake-game/</loc>
+        <lastmod>2025-07-18T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/en/posts/language-acquisition/how-to/comprehensible-input/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/sections/etc/posts/games/tetris-game/</loc>
+        <lastmod>2025-07-18T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/en/posts/language-acquisition/how-to/keep-calm-read-books/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <loc>/dev/</loc>
+        <lastmod>2025-07-18T11:29:48.307Z</lastmod>
       </url><url>
-        <loc>/en/posts/language-acquisition/how-to/language-acquisition/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/en/posts/language-acquisition/how-to/mental-representation/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/en/posts/language-acquisition/zzzpeakit/coming-soon/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/jp/posts/books/for-english-learner/the-velveteen-rabbit/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/en/</loc>
-        <lastmod>2023-07-25T17:43:09.565Z</lastmod>
+        <loc>/etc/</loc>
+        <lastmod>2025-07-18T11:29:48.307Z</lastmod>
       </url><url>
         <loc>/</loc>
-        <lastmod>2023-07-25T17:43:09.568Z</lastmod>
-      </url><url>
-        <loc>/jp/</loc>
-        <lastmod>2023-07-25T17:43:09.569Z</lastmod>
-      </url><url>
-        <loc>/en/posts/language-acquisition/zzzpeakit/loop-recorder/</loc>
-        <lastmod>2023-07-29T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/jp/posts/how-to/loop-recorder/</loc>
-        <lastmod>2023-07-29T00:00:00.000Z</lastmod>
-      </url><url>
-        <loc>/jp/posts/how-to/how-to-english/</loc>
-        <lastmod>2023-07-30T11:12:46.132Z</lastmod>
+        <lastmod>2025-07-18T12:55:10.972Z</lastmod>
       </url>
 </urlset>
