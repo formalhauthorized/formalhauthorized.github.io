@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+        <loc>/sections/dev/posts/rust/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/dev/posts/solana/basics/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/dev/posts/solidity/basics/start/</loc>
+        <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/etc/posts/games/snake-game/</loc>
+        <lastmod>2025-07-18T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/etc/posts/games/tetris-game/</loc>
+        <lastmod>2025-07-18T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/dev/</loc>
+        <lastmod>2025-07-18T11:29:48.307Z</lastmod>
+      </url><url>
+        <loc>/</loc>
+        <lastmod>2025-07-18T12:55:10.972Z</lastmod>
+      </url><url>
+        <loc>/etc/</loc>
+        <lastmod>2025-07-18T12:57:18.019Z</lastmod>
+      </url>
+</urlset>

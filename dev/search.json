@@ -1,0 +1,23 @@
+
+
+
+
+{"search" : [
+  {
+    "url" : "/sections/dev/posts/rust/start/",
+    "title" : "start-rust",
+    "text" : "start rust undefined this section about rust #start #begin #basics #rust",
+    "description" : ""
+  },
+  {
+    "url" : "/sections/dev/posts/solana/basics/start/",
+    "title" : "start-solana",
+    "text" : "start solana undefined this section about solana basics #start #begin #basics #solana",
+    "description" : ""
+  },
+  {
+    "url" : "/sections/dev/posts/solidity/basics/start/",
+    "title" : "start-solidity",
+    "text" : "start solidity undefined this section about solidity basics #solidity #start",
+    "description" : ""
+  }]}
