@@ -20,4 +20,10 @@
     "title" : "start-solidity",
     "text" : "start solidity undefined this section about solidity basics #solidity #start",
     "description" : ""
+  },
+  {
+    "url" : "/sections/dev/posts/rust/wasm-tutorial/",
+    "title" : "wasm tutorial game of life",
+    "text" : "wasm tutorial game life undefined this based tutorial: life game life wrapper { top: 0; left: width: 100%; height: display: flex; flex direction: column; align items: center; justify content: } import init { universe cell } from &#39; /wasm_game_of_lifejs&#39;; async function run() const cell_size = 5; // px grid_color &quot;#cccccc&quot;; dead_color &quot;#ffffff&quot;; alive_color &quot;#000000&quot;; await init(); memory wasmmemory; consolelog(wasm); // construct get its width height const universe universenew(); const universewidth(); const height universeheight(); const canvas documentgetelementbyid(&quot;game life canvas&quot;); canvasheight (cell_size + 1) * 1; canvaswidth 1; const ctx canvasgetcontext(&#39;2d&#39;) const getindex (row column) =&gt; return row column; }; drawgrid () ctxbeginpath(); ctxstrokestyle grid_color; vertical lines (let 0; &lt;= width; ++) ctxmoveto( 1 0); ctxlineto( 1); } horizontal j height; j++) ctxmoveto(0 ctxlineto((cell_size ctxstroke(); }; const drawcells cellsptr universecells(); cells new uint8array(memorybuffer cellsptr height); ctxbeginpath(); &lt; row++) col col++) idx getindex(row col); ctxfillstyle cells[idx] === celldead dead_color : alive_color; ctxfillrect( 1 cell_size cell_size ); } ctxstroke(); }; renderloop universetick(); drawgrid(); drawcells(); requestanimationframe(renderloop); }; drawgrid(); drawcells(); requestanimationframe(renderloop); run(); #rust #wasm #tutorial",
+    "description" : ""
   }]}
