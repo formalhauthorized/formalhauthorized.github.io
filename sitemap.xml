@@ -33,5 +33,14 @@
       </url><url>
         <loc>/sections/dev/posts/antora/quickstart/</loc>
         <lastmod>2025-08-13T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/dev/posts/bitcoin/bitcoin-tutorial-regtest-101/</loc>
+        <lastmod>2025-08-13T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/dev/posts/bitcoin/example_transaction_bytemap/</loc>
+        <lastmod>2025-08-13T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/sections/dev/posts/solana/basics/how-to-sysvar-accounts/</loc>
+        <lastmod>2025-08-13T00:00:00.000Z</lastmod>
       </url>
 </urlset>
