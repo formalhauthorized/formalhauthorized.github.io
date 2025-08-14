@@ -19,15 +19,6 @@
         <loc>/sections/dev/posts/rust/wasm-tutorial/</loc>
         <lastmod>2025-07-21T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/</loc>
-        <lastmod>2025-07-21T08:51:28.337Z</lastmod>
-      </url><url>
-        <loc>/dev/</loc>
-        <lastmod>2025-07-21T08:51:28.337Z</lastmod>
-      </url><url>
-        <loc>/etc/</loc>
-        <lastmod>2025-07-21T08:51:28.337Z</lastmod>
-      </url><url>
         <loc>/sections/dev/posts/docker/clear-cache/</loc>
         <lastmod>2025-08-07T00:00:00.000Z</lastmod>
       </url><url>
@@ -42,5 +33,14 @@
       </url><url>
         <loc>/sections/dev/posts/solana/basics/how-to-sysvar-accounts/</loc>
         <lastmod>2025-08-13T00:00:00.000Z</lastmod>
+      </url><url>
+        <loc>/</loc>
+        <lastmod>2025-08-14T11:58:27.916Z</lastmod>
+      </url><url>
+        <loc>/dev/</loc>
+        <lastmod>2025-08-14T11:58:27.916Z</lastmod>
+      </url><url>
+        <loc>/etc/</loc>
+        <lastmod>2025-08-14T11:58:27.917Z</lastmod>
       </url>
 </urlset>
