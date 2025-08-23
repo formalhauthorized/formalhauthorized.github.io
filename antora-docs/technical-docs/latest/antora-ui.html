@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Antora UI :: Formalhauthorized Docs</title>
+    <meta name="generator" content="Antora 3.1.12">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Formalhauthorized Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="technical-docs" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Technical Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Welcome</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-docs.html">Antora Intro</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Technical Docs</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../assets/index.html">assets</a></div>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Technical Docs</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">latest</a>
+        </li>
+        <li class="version">
+          <a href="../v0.1/index.html">v0.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Technical Docs</a></li>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="antora-ui.html">Antora UI</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">latest</button>
+  <div class="version-menu">
+    <a class="version is-current" href="antora-ui.html">latest</a>
+    <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/antora-ui.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Antora UI</h1>
+<div class="sect1">
+<h2 id="_supplemental_ui"><a class="anchor" href="#_supplemental_ui"></a>Supplemental UI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To make a few adjustments to the UI bundle.
+To see more, visit the <a href="https://docs.antora.org/antora/latest/playbook/ui-supplemental-files/">antora docs</a>.</p>
+</div>
+<div class="paragraph">
+<p>The supplemental UI is overlaid onto the files in the loaded UI bundle. (either add or replace)</p>
+</div>
+<div class="paragraph">
+<p>Under <code>ui</code> category, put <code>supplementa_files</code> key. The key accepts either (exclusive)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>path of a directory</p>
+</li>
+<li>
+<p>a map of virtual files</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_supplemental_files_with_directory"><a class="anchor" href="#_supplemental_files_with_directory"></a>Supplemental_files with directory</h3>
+<div class="paragraph">
+<p>You can specify with a relative or absolute filesystem path.</p>
+</div>
+<div class="paragraph">
+<p>For relative paths:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>~</code>: relative to the user&#8217;s home directory</p>
+</li>
+<li>
+<p><code>.</code>: relative to the location of the playbook file</p>
+</li>
+<li>
+<p><code>~+</code> or no prefix: relative to the current working directory</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Example of supplementa_files with directory</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">ui:
+  supplemental_files: ./supplemental-ui</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The files in the specified directory will be added to the loaded UI bundle.
+The directory is assumed to be the root</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supplemental_files_with_virtual_files"><a class="anchor" href="#_supplemental_files_with_virtual_files"></a>Supplemental_files with virtual files</h3>
+<div class="paragraph">
+<p>If the given value is an array, it is assumed to be a virtul file.</p>
+</div>
+<div class="paragraph">
+<p>A virtual file entry has two keys:
+- <code>path</code>: relative path of the file in the UI
+- <code>contents</code>: three possibility
+  - omit the <code>contents</code> key: create an empty file
+  - file path: a single line ends with a file extension
+    - the contents of the file will be assigned to the virtual file
+  - contents:
+    - use the given value as the contents</p>
+</div>
+<div class="listingblock">
+<div class="title">Example for the file path</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">ui:
+  supplemental_files:
+  - path: partials/head-meta.hbs
+    contents: ./supplemental-ui/partials/head-meta.hbs</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example for the contents</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">ui:
+  supplemental_files:
+  - path: partials/head-meta.hbs
+    contents: |
+      {{#with site.keys.googleSiteVerification}}
+      &lt;meta name="google-site-verification" content="{{this}}"&gt;
+      {{/with}}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_static_files"><a class="anchor" href="#_static_files"></a>Static files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Publish files to the root of the published site: static files</p>
+</div>
+<div class="paragraph">
+<p>The static files are identified using <code>ui.yml</code></p>
+</div>
+<div class="listingblock">
+<div class="title">Example for favicon</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">ui:
+  supplemental_files:
+  - path: favicon.ico
+    contents: ./supplemental-ui/favicon.ico
+  - path: ui.yml
+    contents: |
+      static_files:
+      - favicon.ico</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
