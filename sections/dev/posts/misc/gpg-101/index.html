@@ -14,7 +14,24 @@ gpg --export-secret-key <span class="token parameter variable">-a</span> <span c
 <span class="token comment"># afterwards, make sure you delete that</span>
 shred secretkey.asc <span class="token operator">&amp;&amp;</span> <span class="token function">rm</span> secretkey.asc
 <span class="token comment"># or</span>
-shred <span class="token parameter variable">--remove</span> secretkey.asc</code></pre><h2>encrypt and decrypt</h2><p>After the setting up from above, you can encrypt and decrypt files.</p><p>The commands to use:</p><pre class="language-shell"><code class="language-shell"><span class="token comment"># encrypt</span>
+shred <span class="token parameter variable">--remove</span> secretkey.asc</code></pre><p>But, the imported key will shown as <code>unknown</code>. After you are sure it is the correct key, you can set <code>trust</code>:</p><pre class="language-shell"><code class="language-shell">gpg --edit-key user@usermail.com
+
+gpg<span class="token operator">></span> trust
+
+
+Please decide how far you trust this user to correctly verify other <span class="token function">users</span><span class="token string">' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don'</span>t know or won't say
+  <span class="token number">2</span> <span class="token operator">=</span> I <span class="token keyword">do</span> NOT trust
+  <span class="token number">3</span> <span class="token operator">=</span> I trust marginally
+  <span class="token number">4</span> <span class="token operator">=</span> I trust fully
+  <span class="token number">5</span> <span class="token operator">=</span> I trust ultimately
+  m <span class="token operator">=</span> back to the main menu
+
+Your decision? <span class="token number">5</span>
+
+gpg<span class="token operator">></span> save</code></pre><p>Read about the trust levels and values. This is taken from <a href="https://unix.stackexchange.com/questions/407062/gpg-list-keys-command-outputs-uid-unknown-after-importing-private-key-into">here</a>.</p><h2>encrypt and decrypt</h2><p>After the setting up from above, you can encrypt and decrypt files.</p><p>The commands to use:</p><pre class="language-shell"><code class="language-shell"><span class="token comment"># encrypt</span>
 gpg <span class="token parameter variable">--output</span> document.txt.gpg <span class="token parameter variable">--encrypt</span> <span class="token parameter variable">--recipient</span> receiver@sample.com document.txt
 <span class="token comment"># to send over as text, use armor</span>
 gpg <span class="token parameter variable">--output</span> document.txt.gpg <span class="token parameter variable">--encrypt</span> <span class="token parameter variable">--armor</span> <span class="token parameter variable">--recipient</span> receiver@sample.com document.txt
