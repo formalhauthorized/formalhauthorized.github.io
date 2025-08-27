@@ -4,10 +4,10 @@
         <loc>/sections/dev/posts/rust/start/</loc>
         <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/sections/dev/posts/solana/basics/start/</loc>
+        <loc>/sections/dev/posts/solana/start/</loc>
         <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/sections/dev/posts/solidity/basics/start/</loc>
+        <loc>/sections/dev/posts/solidity/start/</loc>
         <lastmod>2025-07-17T00:00:00.000Z</lastmod>
       </url><url>
         <loc>/sections/etc/posts/games/snake-game/</loc>
@@ -31,19 +31,19 @@
         <loc>/sections/dev/posts/bitcoin/example_transaction_bytemap/</loc>
         <lastmod>2025-08-13T00:00:00.000Z</lastmod>
       </url><url>
-        <loc>/sections/dev/posts/solana/basics/how-to-sysvar-accounts/</loc>
+        <loc>/sections/dev/posts/solana/how-to-sysvar-accounts/</loc>
         <lastmod>2025-08-13T00:00:00.000Z</lastmod>
       </url><url>
         <loc>/sections/dev/posts/misc/ssh-setting/</loc>
         <lastmod>2025-08-22T00:00:00.000Z</lastmod>
       </url><url>
         <loc>/</loc>
-        <lastmod>2025-08-24T18:27:26.925Z</lastmod>
+        <lastmod>2025-08-27T11:16:47.515Z</lastmod>
       </url><url>
         <loc>/dev/</loc>
-        <lastmod>2025-08-24T18:27:26.925Z</lastmod>
+        <lastmod>2025-08-27T11:16:47.515Z</lastmod>
       </url><url>
         <loc>/etc/</loc>
-        <lastmod>2025-08-24T18:27:26.926Z</lastmod>
+        <lastmod>2025-08-27T11:16:47.516Z</lastmod>
       </url>
 </urlset>

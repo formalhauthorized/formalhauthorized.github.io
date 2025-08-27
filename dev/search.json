@@ -10,13 +10,13 @@
     "description" : ""
   },
   {
-    "url" : "/sections/dev/posts/solana/basics/start/",
+    "url" : "/sections/dev/posts/solana/start/",
     "title" : "start-solana",
     "text" : "start solana undefined this section about solana basics #start #begin #basics #solana",
     "description" : ""
   },
   {
-    "url" : "/sections/dev/posts/solidity/basics/start/",
+    "url" : "/sections/dev/posts/solidity/start/",
     "title" : "start-solidity",
     "text" : "start solidity undefined this section about solidity basics #solidity #start",
     "description" : ""
@@ -52,7 +52,7 @@
     "description" : ""
   },
   {
-    "url" : "/sections/dev/posts/solana/basics/how-to-sysvar-accounts/",
+    "url" : "/sections/dev/posts/solana/how-to-sysvar-accounts/",
     "title" : "how to get Sysvar in a Solana program",
     "text" : "how get sysvar solana program undefined program getting from accountinfo fn process_sysvar(accounts: &amp;amp;[accountinfo]) &gt; programresult { let account_info_iter = &amp;amp;mut accountsiter(); // let&#39;s say first accounts clock clock_info next_account_info(account_info_iter) ; clock &amp;amp;clock::from_account_info(clock_info) ; now can use clock like clockepoch } what happens internally method clock::from_account_info uses trait: source: clock source: sysvar fn from_account_info(account_info: &amp;amp;accountinfo) result&amp;lt;self programerror&gt; !self::check_id(account_infounsigned_key()) return err(programerror::invalidargument); } bincode::deserialize(&amp;amp;account_infodataborrow()) map_err(|_| programerror::invalidargument) } what checked: id check check_id() validates that passed account_infokey matches hardcoded pubkey expected (eg sysvarclock11111111111111111111111111111111) declared via declare_id! macro deserialization id matches account data deserialized using bincode into struct (eg clock) preferred: get() method instead requiring accounts built method: let clock::get() ; this approach cleaner avoids needing explicitly by caller how sysvar::get() works here example implementation source: impl impl_sysvar_get!(sol_get_clock_sysvar); } macro impl_sysvar_get with syscall sol_get_clock_sysvar defined here: #[macro_export] macro_rules! ($syscall_name:ident) =&gt; mut var self::default(); var_addr *mut _ u8; #[cfg(target_os &quot;solana&quot;)] result unsafe { $crate::syscalls::$syscall_name(var_addr) }; #[cfg((target_os &quot;solana&quot;))] $crate::program_stubs::$syscall_name(var_addr); match $crate::entrypoint::success ok(var) e err(einto()) }; } syscall_name case sol_get_clock_sysvar given called chain here step by step clock::get(): self::default() creates uninitialized struct raw pointer memory populates place current chain sysvar now initialized instance (var) returned note every fetched get though supported will error version: solana program 230 #solana #sysvar",
     "description" : ""
