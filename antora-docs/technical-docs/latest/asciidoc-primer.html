@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AsciiDoc primer :: Formalhauthorized Docs</title>
+    <meta name="generator" content="Antora 3.1.12">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Formalhauthorized Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="technical-docs" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Technical Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-docs.html">Antora Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-pages.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Technical Docs</span>
+    <span class="version">latest</span>
+  </div>
+  <ul class="components">
+        <!-- components name with assets will be ignored -->
+      <li class="component is-current">
+        <div class="title"><a href="index.html">Technical Docs</a></div>
+        <ul class="versions">
+          <li class="version is-current is-latest">
+            <a href="index.html">latest</a>
+          </li>
+          <li class="version">
+            <a href="../v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
+  </ul>
+</div>
+
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Technical Docs</a></li>
+    <li><a href="index.html">Antora</a></li>
+    <li><a href="asciidoc-primer.html">AsciiDoc primer</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">latest</button>
+  <div class="version-menu">
+    <a class="version is-current" href="asciidoc-primer.html">latest</a>
+    <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/asciidoc-primer.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">AsciiDoc primer</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>AsciiDoc Primer note from <a href="https://docs.antora.org/antora/latest/asciidoc/">antora docs</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_header"><a class="anchor" href="#_header"></a>header</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">Header examples</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">= Page Title
+:description: A description of this page.
+:docrole: home</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_text_emphasis_punctuation_typography"><a class="anchor" href="#_text_emphasis_punctuation_typography"></a>Text emphasis, punctuation, typography</h2>
+<div class="sectionbody">
+<div id="example-internal-xref" class="listingblock">
+<div class="title">bold example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">Make a *word* or *a phrase of text* bold in a single set of asterisks.
+Bounded characters with a set of double asterisks. Like cha**act**ers, not cha*act*ers.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make a <strong>word</strong> or <strong>a phrase of text</strong> bold in a single set of asterisks.</p>
+</div>
+<div class="paragraph">
+<p>Bounded characters with a set of double asterisks. Like cha<strong>act</strong>ers, not cha*act*ers.</p>
+</div>
+<div class="paragraph">
+<p>The style of bold text depends on the font and the CSS tyles for <code>&lt;strong&gt;</code> HTML tag.</p>
+</div>
+<div class="listingblock">
+<div class="title">example mixed formatting</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">`*_monospace bold italic phrase_*` &amp; ``**__char__**``acter``**__s__**``</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">italic example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">An italic _word_, and an italic _phrase of text_.
+
+Italic c__hara__cter__s__ within a word.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The style of bold text depends on the font and the CSS tyles for <code>&lt;em&gt;</code> HTML tag.</p>
+</div>
+<div class="listingblock">
+<div class="title">monospace example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">A monospace `word`, and a monospace `phrase of text`.
+
+Monospace c``hara``cter``s`` within a word.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The style of bold text depends on the font and the CSS tyles for <code>&lt;code&gt;</code> HTML tag.</p>
+</div>
+<div class="listingblock">
+<div class="title">highlight example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">Let's #highlight this phrase# and the i and s in th##is##.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The style of bold text depends on the font and the CSS tyles for <code>&lt;mark&gt;</code> HTML tag.</p>
+</div>
+<div class="listingblock">
+<div class="title">quotation raw text</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">.quotation mark
+* 'normal single quote'
+* "normal double quote"
+* '`single quote and backtick.`'
+* "`double quote and backtick.`"</code></pre>
+</div>
+</div>
+<div class="ulist">
+<div class="title">quotation mark</div>
+<ul>
+<li>
+<p>'normal single quote'</p>
+</li>
+<li>
+<p>"normal double quote"</p>
+</li>
+<li>
+<p>&#8216;single quote and backtick.&#8217;</p>
+</li>
+<li>
+<p>&#8220;double quote and backtick.&#8221;</p>
+</li>
+</ul>
+</div>
+<div id="in-page-xref-example" class="listingblock">
+<div class="title">apostrophes raw</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">* The `'80s.
+* The students`' books.
+* I can't find Joey's house.
+* I can't find Joey\'s house.</code></pre>
+</div>
+</div>
+<div class="ulist">
+<div class="title">apostrophes</div>
+<ul>
+<li>
+<p>The &#8217;80s.</p>
+</li>
+<li>
+<p>The students&#8217; books.</p>
+</li>
+<li>
+<p>I can&#8217;t find Joey&#8217;s house.</p>
+</li>
+<li>
+<p>I can&#8217;t find Joey's house.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_special_characters"><a class="anchor" href="#_special_characters"></a>special characters</h3>
+<div class="paragraph">
+<p>Some special characters are replaced with the appropriate character or unicode entity.
+The three special characters, &lt;, &gt;, and &amp;, are always replaced first.</p>
+</div>
+<div class="paragraph">
+<p>See the full table <a href="https://docs.antora.org/antora/latest/asciidoc/special-characters-and-symbols/">here</a></p>
+</div>
+<div class="listingblock">
+<div class="title">characters</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">&amp;sect;
+&amp;amp;
+(C)
+(R)
+(TM)
+...
+&lt;=
+&lt;-
+=&gt;
+-&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>&sect;
+&amp;
+&#169;
+&#174;
+&#8482;
+&#8230;&#8203;
+&#8656;
+&#8592;
+&#8658;
+&#8594;</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subscript_and_superscript"><a class="anchor" href="#_subscript_and_superscript"></a>subscript and superscript</h3>
+<div class="listingblock">
+<div class="title">subscript superscript examples</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">The chemical formula for water is H~2~O.
+What is the answer to E=mc^2^?</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The chemical formula for water is H<sub>2</sub>O.
+What is the answer to E=mc<sup>2</sup>?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_internal_xref"><a class="anchor" href="#_internal_xref"></a>internal xref</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Inline reference example <span id="inline-ref">here</span>.</p>
+</div>
+<div class="listingblock">
+<div class="title">create internal xref</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">=== spectial characters
+
+ [#in-page-xref-example]
+ .apostrophes raw
+ [,adoc]
+ ----
+ * The `'80s.
+ * The students`' books.
+ * I can't find Joey's house.
+ * I can't find Joey\'s house.
+ ----
+
+Inline referenc example [#inline-ref]#here#.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">create internal xref</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">.How to in-page cross reference:
+* &lt;&lt;special characters&gt;&gt;
+* &lt;&lt;special-characters&gt;&gt;
+* &lt;&lt;special characters,go to the section&gt;&gt;
+
+.Link to above block
+&lt;&lt;in-page-xref-example&gt;&gt;
+&lt;&lt;in-page-xref-example&gt;&gt;
+
+.Inline reference
+* &lt;&lt;inline-ref&gt;&gt;
+* &lt;&lt;inline-ref,go to inline example&gt;&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is the same from above block, but rendered. Note the deferences.</p>
+</div>
+<div class="ulist">
+<div class="title">How to in-page cross reference:</div>
+<ul>
+<li>
+<p><a href="#_special_characters">special characters</a></p>
+</li>
+<li>
+<p><a href="#special-characters">[special-characters]</a></p>
+</li>
+<li>
+<p><a href="#_special_characters">this uses section&#8217;s title</a></p>
+</li>
+<li>
+<p><a href="#special-characters">this uses implicit ID</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Link to above block</div>
+<ul>
+<li>
+<p><a href="#in-page-xref-example">apostrophes raw</a></p>
+</li>
+<li>
+<p><a href="#in-page-xref-example">go to the example block</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Inline reference</div>
+<ul>
+<li>
+<p><a href="#inline-ref">[inline-ref]</a></p>
+</li>
+<li>
+<p><a href="#inline-ref">go to inline example</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_url"><a class="anchor" href="#_url"></a>URL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>link to an external URL</p>
+</div>
+<div class="paragraph">
+<p>Links that start with <code>https</code>, <code>ftp</code>, <code>mailto</code>, etc. will automatically turned into hyperlinks.</p>
+</div>
+<div class="paragraph">
+<p>To excape a URL, so that it is not active, prepend it with a backslash <code>\</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">URL examples</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">Visit the https://chat.antora.org[Antora chat room].
+
+This URL is displayed, \https://gitlab.com, but isn't clickable.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that a URL  with characters like <code>_</code> or <code>^</code> might not display correctly.
+See this <a href="https://docs.antora.org/antora/latest/asciidoc/external-urls/#troubleshooting-urls">troubleshooting</a></p>
+</div>
+<div class="listingblock">
+<div class="title">troubleshoot url</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">= Page Title
+:url-peak: https://www.google.com/maps/place/Antora+Peak/@38.3249976,-106.2355882,14z/data=!3m1!4b1!4m5!3m4!1s0x871572433f469bd7:0xd2bdf15e615cd269!8m2!3d38.3249994!4d-106.2180786!5m1!1e4
+
+{url-peak}[This URL] was complicated, but a page attribute came to our rescue!
+
+pass:macros[URL goes between these brackets]
+Anyone want to climb this 13er with me? (pass:macros[https://www.14ers.com/13ers/peak.php?peakkey=4740])</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lists"><a class="anchor" href="#_lists"></a>Lists</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="title">Ordered list example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">. Step 1
+. Step 2
+.. Details
+... Mini-details
+.... Micro-details
+..... We're really down in the weeds now.
+.. More details
+. Step 3
+
+[lowergreek]
+. alpha
+. beta
+. gamma
+
+[start=4]
+. Picking up where we left off.
+. Add one more ingredient.
+. Mix and serve!</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Step 1</p>
+</li>
+<li>
+<p>Step 2</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Details</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Mini-details</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>Micro-details</p>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p>We&#8217;re really down in the weeds now.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>More details</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Step 3</p>
+</li>
+</ol>
+</div>
+<div class="olist lowergreek">
+<ol class="lowergreek">
+<li>
+<p>alpha</p>
+</li>
+<li>
+<p>beta</p>
+</li>
+<li>
+<p>gamma</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Picking up where we left off.</p>
+</li>
+<li>
+<p>Add one more ingredient.</p>
+</li>
+<li>
+<p>Mix and serve!</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Unordered list example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">* Item A
+* Item B
+** Item B1
+*** Details
+**** More details
+***** Details about the details
+** Item B2
+* Item C</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Item A</p>
+</li>
+<li>
+<p>Item B</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Item B1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Details</p>
+<div class="ulist">
+<ul>
+<li>
+<p>More details</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Details about the details</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Item B2</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Item C</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Complex ordered and unordered lists</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> * A list item can contain two or more paragraphs or blocks of content.
+ +
+ [source,yaml]
+ ----
+   artifacts:
+     expire_in: 1 week
+ ----
+ +
+ ====
+ An example block
+ ====
+
+ ** A literal paragraph doesn't require a list continuation.
+
+  $ antora antora-playbook.yml
+
+ * You can also mix list item types in the same list.
+ ** Unordered list item
+ ... Ordered list item
+ .... Another ordered list item
+ +
+ term:: A description list term and content.</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A list item can contain two or more paragraphs or blocks of content.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">  artifacts:
+    expire_in: 1 week</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>An example block</p>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A literal paragraph doesn&#8217;t require a list continuation.</p>
+<div class="literalblock">
+<div class="content">
+<pre>$ antora antora-playbook.yml</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>You can also mix list item types in the same list.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unordered list item</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Ordered list item</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li>
+<p>Another ordered list item</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">term</dt>
+<dd>
+<p>A description list term and content.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alternatively, when a list item contains multiple blocks, you can wrap them in a delimited open block (--). Then you only need a single list continuation line to attach the open block to the list item.</p>
+</div>
+<div class="listingblock">
+<div class="title">example open block</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> * A list item that includes several blocks wrapped in an open block.
+ +
+ --
+ [source,yaml]
+ ----
+   artifacts:
+     expire_in: 1 week
+ ----
+
+ ====
+ An example block
+ ====
+
+ Another paragraph
+ --</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A list item that includes several blocks wrapped in an open block.</p>
+<div class="openblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">  artifacts:
+    expire_in: 1 week</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>An example block</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Another paragraph</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Description list</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">Keyboard::
+Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+
+
+
+term 1::
+This description needs two paragraphs.
+To attach them both to term 1, use a list continuation (+) on the line separating the paragraphs.
++
+This is the second paragraph for term 1.
+
+term 2:: This description includes an admonition block.
+Like additional paragraphs, blocks also need to be connected with a +.
++
+NOTE: An admonition block that is part of term 2's description.
+
+term 3::
+* unordered list item
+.. ordered list item
+... another ordered list item</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Keyboard</dt>
+<dd>
+<p>Used to enter text or control items on the screen.</p>
+</dd>
+<dt class="hdlist1">Mouse</dt>
+<dd>
+<p>Used to point to and select items on your computer screen.</p>
+</dd>
+<dt class="hdlist1">term 1</dt>
+<dd>
+<p>This description needs two paragraphs.
+To attach them both to term 1, use a list continuation (+) on the line separating the paragraphs.</p>
+<div class="paragraph">
+<p>This is the second paragraph for term 1.</p>
+</div>
+</dd>
+<dt class="hdlist1">term 2</dt>
+<dd>
+<p>This description includes an admonition block.
+Like additional paragraphs, blocks also need to be connected with a +.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An admonition block that is part of term 2&#8217;s description.
+</td>
+</tr>
+</table>
+</div>
+</dd>
+<dt class="hdlist1">term 3</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>unordered list item</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>ordered list item</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>another ordered list item</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_and_so_on"><a class="anchor" href="#_and_so_on"></a>and so on</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>More things covered by antora docs' asciidoc primer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lists: Description Lists, Checklists</p>
+</li>
+<li>
+<p>Embed a Video</p>
+</li>
+<li>
+<p>UI Macros: Things like button, Keybinding and Menu syntax</p>
+</li>
+<li>
+<p>Source Blocks</p>
+</li>
+<li>
+<p>Admonitions</p>
+</li>
+<li>
+<p>Examples</p>
+</li>
+<li>
+<p>Sidebars</p>
+</li>
+<li>
+<p>Comments</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more asciidoc stuff Read further form the <a href="https://docs.antora.org/antora/latest/asciidoc/description-lists/">antora doc</a>. Or visit the <a href="https://docs.asciidoctor.org/">asciidoc</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

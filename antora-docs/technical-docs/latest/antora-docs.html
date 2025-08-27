@@ -59,13 +59,25 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Welcome</a>
+    <a class="nav-link" href="index.html">Antora</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="antora-docs.html">Antora Intro</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-pages.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
   </li>
 </ul>
   </li>
@@ -80,22 +92,21 @@
     <span class="version">latest</span>
   </div>
   <ul class="components">
-    <li class="component">
-      <div class="title"><a href="../../assets/index.html">assets</a></div>
-    </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">Technical Docs</a></div>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">latest</a>
-        </li>
-        <li class="version">
-          <a href="../v0.1/index.html">v0.1</a>
-        </li>
-      </ul>
-    </li>
+        <!-- components name with assets will be ignored -->
+      <li class="component is-current">
+        <div class="title"><a href="index.html">Technical Docs</a></div>
+        <ul class="versions">
+          <li class="version is-current is-latest">
+            <a href="index.html">latest</a>
+          </li>
+          <li class="version">
+            <a href="../v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
   </ul>
 </div>
+
     </div>
   </aside>
 </div>
@@ -106,7 +117,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Technical Docs</a></li>
-    <li><a href="index.html">Welcome</a></li>
+    <li><a href="index.html">Antora</a></li>
     <li><a href="antora-docs.html">Antora Intro</a></li>
   </ul>
 </nav>
@@ -306,11 +317,11 @@ Also, the xref does not require if it is from a pages family. When it is require
 <div class="listingblock">
 <div class="title">example from other content source</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">image:assets::favicon-32x32.png[test picture: a green cat alien from formalhaut]</code></pre>
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> image:assets::favicon-32x32.png[test picture: a green cat alien from formalhaut]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The example above <span class="image"><img src="../../assets/_images/favicon-32x32.png" alt="test"></span>.</p>
+<p>The example above <span class="image"><img src="../../assets/_images/example-image.png" alt="test"></span>.</p>
 </div>
 </div>
 </div>

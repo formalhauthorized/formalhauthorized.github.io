@@ -59,13 +59,25 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Welcome</a>
+    <a class="nav-link" href="index.html">Antora</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="antora-docs.html">Antora Intro</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-pages.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
   </li>
 </ul>
   </li>
@@ -80,22 +92,21 @@
     <span class="version">latest</span>
   </div>
   <ul class="components">
-    <li class="component">
-      <div class="title"><a href="../../assets/index.html">assets</a></div>
-    </li>
-    <li class="component is-current">
-      <div class="title"><a href="index.html">Technical Docs</a></div>
-      <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">latest</a>
-        </li>
-        <li class="version">
-          <a href="../v0.1/index.html">v0.1</a>
-        </li>
-      </ul>
-    </li>
+        <!-- components name with assets will be ignored -->
+      <li class="component is-current">
+        <div class="title"><a href="index.html">Technical Docs</a></div>
+        <ul class="versions">
+          <li class="version is-current is-latest">
+            <a href="index.html">latest</a>
+          </li>
+          <li class="version">
+            <a href="../v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
   </ul>
 </div>
+
     </div>
   </aside>
 </div>
@@ -106,7 +117,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Technical Docs</a></li>
-    <li><a href="index.html">Welcome</a></li>
+    <li><a href="index.html">Antora</a></li>
     <li><a href="antora-ui.html">Antora UI</a></li>
   </ul>
 </nav>
@@ -240,6 +251,65 @@ The directory is assumed to be the root</p>
     contents: |
       static_files:
       - favicon.ico</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_troubleshoot"><a class="anchor" href="#_github_troubleshoot"></a>github troubleshoot</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_github_pages_no_css"><a class="anchor" href="#_github_pages_no_css"></a>github pages no css</h3>
+<div class="paragraph">
+<p>Github Pages runs all files through <code>Jekyll</code>, which will remove all files with <code>_</code>.
+This will remove all the css and js files generated with antora.</p>
+</div>
+<div class="paragraph">
+<p>To disable this <code>Jekyll</code> feature, you have to put <code>.nojekyll</code> file to the root of the published site.</p>
+</div>
+<div class="paragraph">
+<p>For more detailed explanation, checkout <a href="https://docs.antora.org/antora/latest/publish-to-github-pages/#jekyll-and-underscore-files">this page</a>.</p>
+</div>
+<div class="paragraph">
+<p>One way suggeted is to use the supplemental UI:</p>
+</div>
+<div class="listingblock">
+<div class="title">antora-playbook.yml that adds .nojekyll file</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">ui:
+  bundle:
+    url: &lt;url-of-bundle-goes-here&gt;
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+  - path: .nojekyll</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a brief explanation:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the first item under <code>supplemental_files</code> adds <code>ui.yml</code> file:</p>
+<div class="listingblock">
+<div class="title">ui.yml added by supplemental_files</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">static_files:
+- .nojekyll</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the <code>static_files</code> means that the list of files will be placed in the root of the site.
+So, it will place the <code>.nojekyll</code> file on the root of the site</p>
+</div>
+</li>
+<li>
+<p>the second item under <code>supplemental_files</code> adds <code>.nojekyll</code> file, which is empty</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
