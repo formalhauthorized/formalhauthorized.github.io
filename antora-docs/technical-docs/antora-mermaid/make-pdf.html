@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Antora snippets :: Formalhauthorized Docs</title>
+    <title>Make pdf :: Formalhauthorized Docs</title>
+    <link rel="canonical" href="https://formalhauthorized.github.io/technical-docs/antora-mermaid/make-pdf.html">
     <meta name="generator" content="Antora 3.1.12">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
-<header class="header">
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({"startOnLoad":true});</script><header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../..">Formalhauthorized Docs</a>
+      <a class="navbar-item" href="https://formalhauthorized.github.io">Formalhauthorized Docs</a>
       <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
         <span></span>
         <span></span>
@@ -47,7 +48,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="technical-docs" data-version="latest">
+<div class="nav-container" data-component="technical-docs" data-version="antora-mermaid">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -70,7 +71,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="antora-pages.html">Pages</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -79,7 +80,17 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="use-mermaid.html">use mermaid</a>
+  </li>
 </ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="make-pdf.html">Make pdf</a>
   </li>
 </ul>
   </li>
@@ -89,7 +100,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Technical Docs</span>
-    <span class="version">latest</span>
+    <span class="version">antora-mermaid</span>
   </div>
   <ul class="components">
         <!-- components name with assets will be ignored -->
@@ -97,7 +108,7 @@
         <div class="title"><a href="index.html">Technical Docs</a></div>
         <ul class="versions">
           <li class="version is-current is-latest">
-            <a href="index.html">latest</a>
+            <a href="index.html">antora-mermaid</a>
           </li>
           <li class="version">
             <a href="../v0.1/index.html">v0.1</a>
@@ -117,129 +128,105 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Technical Docs</a></li>
-    <li><a href="index.html">Antora</a></li>
-    <li><a href="antora-snippets.html">Antora snippets</a></li>
+    <li><a href="make-pdf.html">Make pdf</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">latest</button>
+  <button class="version-menu-toggle" title="Show other versions of page">antora-mermaid</button>
   <div class="version-menu">
-    <a class="version is-current" href="antora-snippets.html">latest</a>
+    <a class="version is-current" href="make-pdf.html">antora-mermaid</a>
     <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/antora-snippets.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/make-pdf.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Antora snippets</h1>
+<h1 class="page">Make pdf</h1>
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph metadata">
+<p>Formalhauthorized&#8201;&#8212;&#8201;version 1.0, 2025-09-10</p>
+</div>
 <div class="paragraph">
-<p>These are just taken from the official docs.antora.org.</p>
+<p>To build pdf using antora and asciidoctor-pdf</p>
+</div>
+<div class="paragraph">
+<p>References:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://docs.antora.org/assembler/latest/" class="bare">docs.antora.org/assembler/latest/</a></p>
+</li>
+<li>
+<p><a href="https://docs.asciidoctor.org/pdf-converter/latest/" class="bare">docs.asciidoctor.org/pdf-converter/latest/</a></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_images"><a class="anchor" href="#_images"></a>images</h2>
+<h2 id="_install"><a class="anchor" href="#_install"></a>install</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://docs.antora.org/antora/latest/page/images/">docs</a></p>
+<p>You need to install asciidoctor, asciidoctor-pdf and antora&#8217;s pdf extension.
+Note that asciidoctor will install ruby so, you can use gem.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s say you have an image file in <code>assets</code> component.</p>
+<p>Here I assume debian.</p>
 </div>
 <div class="listingblock">
-<div class="title">image location</div>
+<div class="title">Setup</div>
 <div class="content">
-<pre>assets
-|-- README.md
-|-- antora.yml
-`-- modules
-    `-- ROOT
-        `-- images
-            `-- example-image.png</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Image examples</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> below is a block image example.
-
- image::assets::example-image.png[]
-
- You can also put inline image::assets::example-image.png[].
-
- The image can link using xref: image:assets::example-image.png[The image alt text,xref=antora-pages.adoc].
-
- The image can link using xref: image:assets::example-image.png[The image alt text,30,40,xref=antora-pages.adoc].
-
- image::assets::example-image.png[The image alt text,50,50,xref=antora-pages.adoc]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The image with link: <span class="image xref-page"><a class="image" href="antora-pages.html"><img src="../../assets/_images/example-image.png" alt="The image alt text" title="A green alien cat"></a></span>.</p>
-</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="antora-pages.html"><img src="../../assets/_images/example-image.png" alt="The image alt text" width="50"></a>
-</div>
-</div>
-<div class="paragraph">
-<p>The image macro has positional attributes (optional). Assign them before setting named attributes such as <code>xref</code>. The example above  is <code>alt</code>, <code>width</code>, and <code>height</code>.</p>
-</div>
-<div class="listingblock">
-<div class="title">Current page deep link</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> image::panorama.png[xref=#elevation]
-
- The range can be traversed by Cottonwood Pass, Independence Pass, or Hagerman Pass.
-
- [#elevation]
- == Pass elevations
-
- The passes usually open in late spring.
-
- One can also link to self:
- image::panorama.png[link=self]</code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">sudo apt update
+sudo apt install asciidoctor
+gem install asciidoctor-pdf
+// For syntax highlight
+gem install rouge
+// install antora pdf-extension either locally or globally depending your settings
+npm i -g @antora/pdf-extension</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_partials"><a class="anchor" href="#_partials"></a>partials</h2>
+<h2 id="_asciidoctor_pdf"><a class="anchor" href="#_asciidoctor_pdf"></a>asciidoctor-pdf</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Reusable</p>
-</div>
-<div class="paragraph">
-<p>A partial is not required to be an AsciiDoc file.</p>
+<p>To use asccidoctor-pdf, you can run</p>
 </div>
 <div class="listingblock">
-<div class="title">Example partials</div>
+<div class="title">Setup</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> [plantuml,my-schema,svg]
- ....
- include::partial$diagrams/my-schema.puml[]
- ....</code></pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">asciidoctor-pdf basic-example.adoc</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_attachment"><a class="anchor" href="#_attachment"></a>attachment</h2>
+<h2 id="_antora"><a class="anchor" href="#_antora"></a>antora</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Unlike pages, attachments don’t have default reference text, so it’s always good to specify link text to ensure a good reader experience.</p>
+<p>To use antora to build pdf, you need to register the pdf-extension in your antora playbook.
+It is also good to add the site url for the links to work</p>
 </div>
 <div class="listingblock">
-<div class="title">Example attachment</div>
+<div class="title">antora-playbook.yml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc"> Download xref:attachment$practice-project.zip[the sample project] to try it out!</code></pre>
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">site:
+  url: https://docs.example.org
+antora:
+  extensions:
+  - '@antora/pdf-extension'
+# ...</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>You can have the configurations for pdf generation in <code>antora-assembler.yml</code> or add your own config file under <code>config_file</code> key.</p>
 </div>
 </div>
 </div>
