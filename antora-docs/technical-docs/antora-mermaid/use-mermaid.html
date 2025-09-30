@@ -323,6 +323,8 @@ You need to set up couple of things.</p>
 </div>
 <div class="sect2">
 <h3 id="_setup_2"><a class="anchor" href="#_setup_2"></a>setup</h3>
+<div class="sect3">
+<h4 id="_install_asciidoctor_diagram"><a class="anchor" href="#_install_asciidoctor_diagram"></a>install asciidoctor-diagram</h4>
 <div class="listingblock">
 <div class="title">Install asciidoctor-diagram</div>
 <div class="content">
@@ -332,6 +334,9 @@ You need to set up couple of things.</p>
 <div class="paragraph">
 <p>You can as well use <code>asciidoctor-kroki</code>. The difference is that kroki uses kroki server, while <code>asciidoctor-diagram</code> renders locally. So if you want to use <code>asciidoctor-diagram</code> with mermaid, you need to install <code>mermaid-cli</code>.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_install_mermaid_cli"><a class="anchor" href="#_install_mermaid_cli"></a>install mermaid-cli</h4>
 <div class="paragraph">
 <p>Here I install mermaid-cli globally.</p>
 </div>
@@ -345,6 +350,9 @@ You need to set up couple of things.</p>
 <p>This will enable the command <code>mmdc</code>. You can try out with <code>mmdc -i input.mmd -o output.png</code> to see it works properly.
 Note that <code>mmdc</code> needs chromium to render (at least for now), so we will install chromium later.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_update_antora_assmebler_yml"><a class="anchor" href="#_update_antora_assmebler_yml"></a>update antora-assmebler.yml</h4>
 <div class="paragraph">
 <p>Now you have to tell the antora-assembler, who is making the pdf file, to use the asciidoctor-diagram.
 So, update the <code>antora-assembler.yml</code> file.</p>
@@ -369,9 +377,14 @@ So, update the <code>antora-assembler.yml</code> file.</p>
 <div class="paragraph">
 <p>Depending on your setting, this may be enough.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_chromium_for_mermaid_cli"><a class="anchor" href="#_chromium_for_mermaid_cli"></a>chromium for mermaid-cli</h4>
 <div class="paragraph">
 <p>But if you are using docker, the mermaid-cli <code>mmdc</code> might not work, due to lacking libs.</p>
 </div>
+<div class="sect4">
+<h5 id="_option_1_install_libraries_for_chromium"><a class="anchor" href="#_option_1_install_libraries_for_chromium"></a>option 1. install libraries for chromium</h5>
 <div class="paragraph">
 <p>Here is a possible fix (for debian), (it is from gpt, so might be not 100% correct)</p>
 </div>
@@ -400,6 +413,9 @@ sudo apt-get install -y \
   libxkbcommon-x11-0</code></pre>
 </div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_option_2_install_chromium"><a class="anchor" href="#_option_2_install_chromium"></a>option 2. install chromium</h5>
 <div class="paragraph">
 <p>Altenatively, just install chromium. This may be better for people with apple silicon.
 Cause we can specify this chromium for the puppeteer, which will smooth out some problems.</p>
@@ -411,9 +427,15 @@ Cause we can specify this chromium for the puppeteer, which will smooth out some
 sudo apt-get install -y chromium</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sandbox_problem_docker"><a class="anchor" href="#_sandbox_problem_docker"></a>Sandbox problem (docker)</h4>
 <div class="paragraph">
 <p>Also, the mermaid-cli might still say that <code>No usable sandbox!</code>.</p>
 </div>
+<div class="sect4">
+<h5 id="_option_1_no_sandbox"><a class="anchor" href="#_option_1_no_sandbox"></a>option 1. no-sandbox</h5>
 <div class="paragraph">
 <p>The easy way to fix it is adding no-sandbox to the mmdc.
 <a href="https://github.com/mermaid-js/mermaid-cli/blob/master/docs/linux-sandbox-issue.md">how-to-no-sandbox</a>.</p>
@@ -454,6 +476,99 @@ Note that puppeteer-config is prefixed with <code>mermaid-</code>: <a href="http
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">build:
   command: asciidoctor-pdf -r asciidoctor-diagram -a mermaid-puppeteer-config=&lt;path-to&gt;/puppeteerConfig.json</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_option_2_docker_run_with_seccomp_profile"><a class="anchor" href="#_option_2_docker_run_with_seccomp_profile"></a>option 2. docker run with seccomp profile</h5>
+<div class="paragraph">
+<p>To allow the docker to use chromium, you need the right setting.</p>
+</div>
+<div class="paragraph">
+<p>For more info, refer to this <a href="https://medium.com/code-and-coffee/running-chromium-in-docker-without-selling-your-soul-433e591802f2">blog post</a>.</p>
+</div>
+<div class="paragraph">
+<p>Long story short, you have to</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>download the <a href="https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json">chrome.json</a></p>
+</li>
+<li>
+<p>run the image with <code>--security-opt seccomp=chrome.json</code></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">example commands</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">curl -L -o chrome.json https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json  <i class="conum" data-value="1"></i><b>(1)</b>
+
+# example run
+docker run -it \
+  --init \
+  --security-opt seccomp=&lt;path to seccomp profile&gt;/chrome.json \ <i class="conum" data-value="2"></i><b>(2)</b>
+  dieters877565/chromedriver:latest
+
+docker run -it \
+  --pids-limit=200 \  <i class="conum" data-value="3"></i><b>(3)</b>
+  --cpus=1 \ <i class="conum" data-value="4"></i><b>(4)</b>
+  --cap-drop=ALL \ <i class="conum" data-value="5"></i><b>(5)</b>
+  --security-opt seccomp=chrome.json \ <i class="conum" data-value="6"></i><b>(6)</b>
+  --security-opt no-new-privileges \ <i class="conum" data-value="7"></i><b>(7)</b>
+  --tmpfs /tmp:rw,noexec,nosuid,nodev,size=128m \
+  --rm -p 8080:8080 -v "$PWD/dropbox":/mnt/dropbox \
+  $IMAGENAME:$VERSION bash --login</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>download the chrome.json</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>give the downloaded chrome.json</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>no fork-bombs, stops it from spawning zombie processes</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>throttle CPU greed, keeps it from hogging all your cores</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>drop every Linux capability</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>specify the path you downloaded chrome.json</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>block privilege escalation</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In this docker container, you can drop the <code>--no-sandbox</code> in the puppeteerConfig.json</p>
+</div>
+<div class="listingblock">
+<div class="title">example puppeteerConfig.json</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "executablePath": "/usr/bin/chromium",
+  "args": ["--disable-dev-shm-usage"]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, it is supposed to work&#8230;&#8203; <a href="/antora-docs/technical-docs/antora-mermaid/_exports/antora.pdf">Download PDF</a></p>
+</div>
 </div>
 </div>
 </div>
