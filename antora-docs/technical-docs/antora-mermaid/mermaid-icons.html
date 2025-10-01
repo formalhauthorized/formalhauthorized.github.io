@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mermaid with custom icons :: Formalhauthorized Docs</title>
+    <link rel="canonical" href="https://formalhauthorized.github.io/technical-docs/antora-mermaid/mermaid-icons.html">
+    <meta name="generator" content="Antora 3.1.13">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  const packs = [{"name":"azure","url":"https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json"},{"name":"logos","url":"https://unpkg.com/@iconify-json/logos@1/icons.json"}].map(({ name, url }) => ({
+    name,
+    loader: () => fetch(url).then((res) => {
+      if (!res.ok) throw new Error(`Failed to load icon pack: ${name} (${res.status})`);
+      return res.json();
+    }),
+  }));
+  try {
+    // Mermaid >= 10.9: registerIconPacks exists. Older versions will just skip.
+    if (typeof mermaid.registerIconPacks === "function") {
+      mermaid.registerIconPacks(packs);
+    } else {
+      // Fallback: log a friendly hint.
+      console.warn("[antora-mermaid-iconpacks] mermaid.registerIconPacks() not found — is your Mermaid version new enough?");
+    }
+  } catch (e) {
+    console.error("[antora-mermaid-iconpacks] Failed to register icon packs:", e);
+  }
+</script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://formalhauthorized.github.io">Formalhauthorized Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="technical-docs" data-version="antora-mermaid">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Technical Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-docs.html">Antora Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-pages.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">asciidoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">mermaid</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="use-mermaid.html">use mermaid</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="mermaid-icons.html">mermaid with custom icons</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="make-pdf.html">Make pdf</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Technical Docs</span>
+    <span class="version">antora-mermaid</span>
+  </div>
+  <ul class="components">
+        <!-- components name with assets will be ignored -->
+      <li class="component">
+        <div class="title"><a href="../../example-docs/antora-mermaid/index.html">Example Docs</a></div>
+        <ul class="versions">
+          <li class="version is-latest">
+            <a href="../../example-docs/antora-mermaid/index.html">antora-mermaid</a>
+          </li>
+          <li class="version">
+            <a href="../../example-docs/v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
+      <li class="component is-current">
+        <div class="title"><a href="index.html">Technical Docs</a></div>
+        <ul class="versions">
+          <li class="version is-current is-latest">
+            <a href="index.html">antora-mermaid</a>
+          </li>
+          <li class="version">
+            <a href="../v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
+  </ul>
+</div>
+
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Technical Docs</a></li>
+    <li>mermaid</li>
+    <li><a href="mermaid-icons.html">mermaid with custom icons</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">antora-mermaid</button>
+  <div class="version-menu">
+    <a class="version is-current" href="mermaid-icons.html">antora-mermaid</a>
+    <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/mermaid-icons.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">mermaid with custom icons</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use custom icons</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_with_site"><a class="anchor" href="#_with_site"></a>with site</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This assumes that you use <a href="https://github.com/snt/antora-mermaid-extension/blob/master/lib/extension.js">antora-mermaid-extension</a>.</p>
+</div>
+<div class="paragraph">
+<p>So, adding icon pack is not coming out of the box.</p>
+</div>
+<div class="paragraph">
+<p>Either you download the antora-mermaid-extension itself and update the code, or add another extension.
+Here we choose to simply add-on</p>
+</div>
+<div class="sect2">
+<h3 id="_add_on_to_the_antora_mermaid_extension"><a class="anchor" href="#_add_on_to_the_antora_mermaid_extension"></a>add-on to the antora-mermaid-extension</h3>
+<div class="listingblock">
+<div class="title">example code written with gpt</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">'use strict'
+
+/**
+ * Antora extension: register Mermaid icon packs *after* the Mermaid init script.
+ *
+ * Config example (in antora-playbook.yml):
+ *
+ * extensions:
+ *   - require: ./antora-mermaid.js            # your existing extension
+ *   - require: ./antora-mermaid-iconpacks.js  # this file
+ *     config:
+ *       # Must match the URL used by your Mermaid init extension!
+ *       mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
+ *       # Optional; defaults to 'header-scripts' (the {{&gt; header-scripts}} slot).
+ *       script_stem: header-scripts
+ *       icon_packs:
+ *       - name: logos
+ *         url: https://unpkg.com/@iconify-json/logos@1/icons.json
+ *       - name: devicon
+ *         url: https://unpkg.com/@iconify-json/devicon@1/icons.json
+ */
+
+const DEFAULT_MERMAID_LIBRARY_URL = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'
+const DEFAULT_SCRIPT_STEM = 'header-scripts'
+
+// We deliberately choose a path that sorts AFTER "partials/mermaid-script.hbs"
+// (commonly used by mermaid init extensions) so our script executes later.
+const ICONPACKS_PARTIAL_PATH = 'partials/zzz-mermaid-iconpacks.hbs'
+const MERMAID_INIT_PARTIAL_PATH = 'partials/mermaid-script.hbs' // for presence check only
+
+module.exports.register = (context, { config }) =&gt; {
+  context.on('uiLoaded', appendIconPacksScript(config))
+}
+
+const appendIconPacksScript = (cfg) =&gt; ({ uiCatalog }) =&gt; {
+
+  const mermaidLibraryUrl = cfg.mermaidLibraryUrl || DEFAULT_MERMAID_LIBRARY_URL
+  const scriptStem = cfg.scriptStem || DEFAULT_SCRIPT_STEM
+  const iconPacks = Array.isArray(cfg.iconPacks) ? cfg.iconPacks : []
+
+  // Nothing to do if no packs configured
+  if (!iconPacks.length) return
+
+  // Avoid adding twice
+  if (uiCatalog.findByType('partial').some(({ path }) =&gt; path === ICONPACKS_PARTIAL_PATH)) return
+
+  // Best-effort: if a known mermaid init partial is present, we’ll append ours with a
+  // lexicographically later path ("zzz-...") so it is rendered after it.
+  // Even if the init partial has a different name, adding our partial later and with
+  // a "zzz-" path usually preserves the intended order in {{&gt; header-scripts}}.
+  const hasMermaidInitPartial = uiCatalog.findByType('partial').some(({ path }) =&gt; path === MERMAID_INIT_PARTIAL_PATH)
+  // (We don’t *require* it; this still works if mermaid is imported again from the same URL.)
+
+  // Validate and sanitize packs (simple guardrails)
+  const packs = iconPacks
+    .map((p) =&gt; ({
+      name: String(p &amp;&amp; p.name || '').trim(),
+      url: String(p &amp;&amp; p.url || '').trim(),
+    }))
+    .filter((p) =&gt; p.name &amp;&amp; p.url)
+
+  if (!packs.length) return
+
+  // Build a tiny ESM that imports the SAME mermaid URL and registers all packs.
+  // Using `import ... from &lt;same URL&gt;` guarantees the same module instance if the URL matches
+  // the init script; otherwise it still works on its own.
+  const packsJson = JSON.stringify(packs)
+  const hbsContent = [
+    '&lt;script type="module"&gt;',
+    `  import mermaid from ${JSON.stringify(mermaidLibraryUrl)};`,
+    `  const packs = ${packsJson}.map(({ name, url }) =&gt; ({`,
+    '    name,',
+    '    loader: () =&gt; fetch(url).then((res) =&gt; {',
+    '      if (!res.ok) throw new Error(`Failed to load icon pack: ${name} (${res.status})`);',
+    '      return res.json();',
+    '    }),',
+    '  }));',
+    '  try {',
+    '    // Mermaid &gt;= 10.9: registerIconPacks exists. Older versions will just skip.',
+    '    if (typeof mermaid.registerIconPacks === "function") {',
+    '      mermaid.registerIconPacks(packs);',
+    '    } else {',
+    '      // Fallback: log a friendly hint.',
+    '      console.warn("[antora-mermaid-iconpacks] mermaid.registerIconPacks() not found — is your Mermaid version new enough?");',
+    '    }',
+    '  } catch (e) {',
+    '    console.error("[antora-mermaid-iconpacks] Failed to register icon packs:", e);',
+    '  }',
+    '&lt;/script&gt;',
+    '',
+  ].join('\n')
+
+  uiCatalog.addFile({
+    contents: Buffer.from(hbsContent),
+    path: ICONPACKS_PARTIAL_PATH, // "zzz-" to bias ordering after common init partials
+    stem: scriptStem,              // {{&gt; header-scripts}} in your UI will include this
+    type: 'partial',
+  })
+}
+
+module.exports.appendIconPacksScript = appendIconPacksScript</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then also update the <code>antora-playbook.yml</code></p>
+</div>
+<div class="listingblock">
+<div class="title">example antora-playbook.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">antora:
+  extensions:
+  - require: '@sntke/antora-mermaid-extension'
+    mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs <i class="conum" data-value="1"></i><b>(1)</b>
+  - require: ./_config-mermaid/antora-mermaid-iconpack.js
+    mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs <i class="conum" data-value="2"></i><b>(2)</b>
+    icon_packs:
+    - name: azure
+      url: https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The mermaid_library_url should match the antora-mermaid-extension. (&lt;1&gt; and &lt;2&gt;)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_for_pdf"><a class="anchor" href="#_for_pdf"></a>for pdf</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This assumes that you use <a href="https://docs.antora.org/assembler/latest/">antora assembler</a> with <a href="https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/mermaid/">asciidoctor-diagram/mermaid</a>.</p>
+</div>
+<div class="paragraph">
+<p>As you can see in the list attributes in the above link, the <code>iconPacks</code> or <code>iconPacksNamesAndUrls</code> for <code>mmdc</code> is not possible to pass through using asciidoctor-diagram. (as far as I know of).</p>
+</div>
+<div class="paragraph">
+<p>To work around, I write a wrapper script:</p>
+</div>
+<div class="listingblock">
+<div class="title">mmdc-wrapper.sh</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">#!/bin/bash
+# Forward all arguments Asciidoctor Diagram gives us
+# but inject your preferred flags
+
+echo "$(date) mmdc wrapper called with: $*" &gt;&gt; /tmp/mmdc-wrapper.log
+
+exec mmdc \
+  --iconPacksNamesAndUrls azure#https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json \ <i class="conum" data-value="1"></i><b>(1)</b>
+  -p &lt;path-to&gt;/puppeteerConfig.json \ <i class="conum" data-value="2"></i><b>(2)</b>
+  "$@"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">example mmdc-wrapper.sh</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">#!/bin/bash
+
+echo "$(date) mmdc wrapper called with: $*" &gt;&gt; /tmp/mmdc-wrapper.log
+
+# If the puppeteerConfig.json is in the same dir as mmdc-wrapper.sh (just to be safe)
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &amp;&gt; /dev/null &amp;&amp; pwd )"
+
+exec mmdc \
+  --iconPacksNamesAndUrls azure#https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json \
+  -p "$SCRIPT_DIR/puppeteerConfig.json" \ <i class="conum" data-value="3"></i><b>(3)</b>
+  "$@"</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do NOT forget to <code>chmod +x mmdc-wrapper.sh</code></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>add the iconPack you want to use here</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>may as well put the puppeteerConfig here</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>well <code>./puppeteerConfig.json</code> also worked somehow</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">mmdc --help</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">  --iconPacks &lt;icons...&gt;                          Icon packs to use, e.g. @iconify-json/logos. These should be Iconify NPM packages that expose a icons.json file, see https://iconify.design/docs/icons/json.html. These will be downloaded from https://unkpg.com when needed. (default: [])
+  --iconPacksNamesAndUrls &lt;prefix#iconsurl...&gt;    Icon packs to use, e.g. azure#https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json where the name (prefix) of the icon pack is defined before the "#" and the url of the json definition after the "#". These should be Iconify json file formatted as IconifyJson, see https://iconify.design/docs/icons/json.html. These will be downloaded when needed. (default: [])</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can as well add other options for <code>mmdc</code> in this wrapper if you want.</p>
+</div>
+<div class="paragraph">
+<p>Then add the mmdc into <code>antora-assembler.yml</code></p>
+</div>
+<div class="listingblock">
+<div class="title">example antora-assembler.yml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">component_version_filter:
+  names: ['*@technical-docs', '*@example-docs']
+assembly:
+  root_level: 0
+  insert_start_page: true
+  section_merge_strategy: enclose
+  doctype: book
+asciidoc:
+  attributes:
+    mermaid-background: 440000
+    mmdc: &lt;path-to&gt;/mmdc-wrapper.sh <i class="conum" data-value="1"></i><b>(1)</b>
+build:
+  clean: true
+  mkdirs: true
+  dir: build-pdf
+  publish: true
+  command: asciidoctor-pdf -r asciidoctor-diagram</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the mmdc path can be relative</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+To be honest it is not really a pretty solution, but a dirty hack, but it kinda works&#8230;&#8203;
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_together"><a class="anchor" href="#_together"></a>Together</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now we have to specify the iconpack both for the site in <code>antora-playbook.yml</code> as well as <code>mmdc-wrapper.sh</code>.
+It is error-prone. So we will make the <code>mmdc-wrapper.sh</code> to look for the antora-playbook.yml for the iconpack information.</p>
+</div>
+<div class="paragraph">
+<p>This is a bit messy code made with gpt&#8230;&#8203;</p>
+</div>
+<div class="listingblock">
+<div class="title">bit messy update for mmed-wrapper.sh</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">#!/bin/bash
+# Forward all arguments Asciidoctor Diagram gives us
+# but inject your preferred flags from antora-playbook.yml
+
+echo "$(date) mmdc wrapper called with: $*" &gt;&gt; /tmp/mmdc-wrapper.log
+
+set -euo pipefail
+
+# --- locate files relative to this wrapper ---
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &amp;&gt; /dev/null &amp;&amp; pwd )"
+
+PUPPETEER_CONFIG="-p${SCRIPT_DIR}/puppeteerConfig.json"
+PLAYBOOK="${SCRIPT_DIR}/../antora-playbook.yml"
+
+echo "$PLAYBOOK" &gt;&gt; /tmp/mmdc-wrapper.log
+
+# --- config: which extension block to read, and which flag to emit ---
+# Which substring must appear in the 'require' field of the extension?
+ICON_EXT_REQUIRE="${ICON_EXT_REQUIRE:-antora-mermaid-iconpack}"
+# Most builds use --iconPacks; some forks used --icons. Override via env if needed.
+ICON_FLAG_NAME="${ICON_FLAG_NAME:---iconPacksNamesAndUrls}"
+
+# Optional debug (stderr only, no files). Enable with: DEBUG=1
+dbg() { if [[ "${DEBUG:-}" == "1" ]]; then printf '%s\n' "$*" &gt;&amp;2; fi; }
+
+dbg "wrapper: using playbook ${PLAYBOOK}"
+dbg "wrapper: target extension require=${ICON_EXT_REQUIRE}"
+
+# ----- need yq (mikefarah) for YAML parsing -----
+if ! command -v yq &gt;/dev/null 2&gt;&amp;1; then
+  echo "$(date) 'yq' not found" &gt;&gt; /tmp/mmdc-wrapper.log
+  dbg "wrapper: 'yq' not found; running mmdc without icon packs"
+  echo "exec mmdc ${PUPPETEER_CONFIG} $@" &gt;&gt; /tmp/mmdc-wrapper.log
+  exec mmdc "${PUPPETEER_CONFIG}" "$@"
+fi
+
+# ----- extract icon packs as name=url lines (substring match on 'require') -----
+# Handles arrays like:
+#   - '@antora/pdf-extension'
+#   - { require: './_config-mermaid/antora-mermaid-iconpack.js', icon_packs: [...] }
+mapfile -t PACK_ITEMS &lt; &lt;(
+  yq -r '
+  ((.antora.extensions // .extensions // [])[])?
+  | select(has("require")?)
+  | select((.require | tostring) | contains("antora-mermaid-iconpack"))
+  | (.icon_packs // [])[]?
+  | "\(.name)=\(.url)"
+  ' "$PLAYBOOK" 2&gt;/dev/null || true
+)
+
+
+
+if [[ ${#PACK_ITEMS[@]} -eq 0 ]]; then
+  echo "$(date) no icon_packs found" &gt;&gt; /tmp/mmdc-wrapper.log
+  dbg "wrapper: no icon_packs found; running mmdc without icon packs"
+  echo "exec mmdc ${PUPPETEER_CONFIG} $@" &gt;&gt; /tmp/mmdc-wrapper.log
+  exec mmdc "${PUPPETEER_CONFIG}" "$@"
+fi
+
+# ----- build args: repeat --iconPacksNamesAndUrls for each pack -----
+echo "PCAK_ITEMS: ${PACK_ITEMS}" &gt;&gt; /tmp/mmdc-wrapper.log
+echo "PCAK_ITEMS: ${#PACK_ITEMS[@]}" &gt;&gt; /tmp/mmdc-wrapper.log
+args=()
+for pack in "${PACK_ITEMS[@]}"; do
+  prefix="${pack%%=*}"; prefix="${prefix##+([[:space:]])}"; prefix="${prefix%%+([[:space:]])}"
+  url="${pack#*=}";     url="${url##+([[:space:]])}";       url="${url%%+([[:space:]])}"
+  echo "prefix: ${prefix}" &gt;&gt; /tmp/mmdc-wrapper.log
+  echo "url: ${url}" &gt;&gt; /tmp/mmdc-wrapper.log
+  [[ -n "$prefix" &amp;&amp; -n "$url" ]] || continue
+  # If your flag variable is --iconPacksNamesAndUrls
+  args+=( "$ICON_FLAG_NAME" "${prefix}#${url}" )
+done
+
+
+dbg "wrapper: passing icon packs: ${args[*]}"
+echo "$(date) passing icon packs ${args[*]}" &gt;&gt; /tmp/mmdc-wrapper.log
+echo "exec mmdc ${PUPPETEER_CONFIG} ${args[@]} $@" &gt;&gt; /tmp/mmdc-wrapper.log
+
+# ----- run mmdc with our flags + original args -----
+exec mmdc "${PUPPETEER_CONFIG}" "${args[@]}" "$@"</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>need <code>yq</code> installed</p>
+</li>
+<li>
+<p>the antora-playbook.yml location is hard coded to be ../ from the mmdc-wrapper.sh</p>
+</li>
+<li>
+<p>it is searching for the <code>antora-mermaid-iconpack</code> from the previous section.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

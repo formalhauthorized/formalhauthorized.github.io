@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Antora snippets :: Formalhauthorized Docs</title>
     <link rel="canonical" href="https://formalhauthorized.github.io/technical-docs/antora-mermaid/antora-snippets.html">
-    <meta name="generator" content="Antora 3.1.12">
+    <meta name="generator" content="Antora 3.1.13">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
   <body class="article">
-<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({"startOnLoad":true});</script><header class="header">
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  const packs = [{"name":"azure","url":"https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json"},{"name":"logos","url":"https://unpkg.com/@iconify-json/logos@1/icons.json"}].map(({ name, url }) => ({
+    name,
+    loader: () => fetch(url).then((res) => {
+      if (!res.ok) throw new Error(`Failed to load icon pack: ${name} (${res.status})`);
+      return res.json();
+    }),
+  }));
+  try {
+    // Mermaid >= 10.9: registerIconPacks exists. Older versions will just skip.
+    if (typeof mermaid.registerIconPacks === "function") {
+      mermaid.registerIconPacks(packs);
+    } else {
+      // Fallback: log a friendly hint.
+      console.warn("[antora-mermaid-iconpacks] mermaid.registerIconPacks() not found — is your Mermaid version new enough?");
+    }
+  } catch (e) {
+    console.error("[antora-mermaid-iconpacks] Failed to register icon packs:", e);
+  }
+</script>
+<header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://formalhauthorized.github.io">Formalhauthorized Docs</a>
@@ -74,16 +95,31 @@
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="use-mermaid.html">use mermaid</a>
+</ul>
   </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">asciidoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">mermaid</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="use-mermaid.html">use mermaid</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mermaid-icons.html">mermaid with custom icons</a>
   </li>
 </ul>
   </li>
@@ -104,6 +140,17 @@
   </div>
   <ul class="components">
         <!-- components name with assets will be ignored -->
+      <li class="component">
+        <div class="title"><a href="../../example-docs/antora-mermaid/index.html">Example Docs</a></div>
+        <ul class="versions">
+          <li class="version is-latest">
+            <a href="../../example-docs/antora-mermaid/index.html">antora-mermaid</a>
+          </li>
+          <li class="version">
+            <a href="../../example-docs/v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
       <li class="component is-current">
         <div class="title"><a href="index.html">Technical Docs</a></div>
         <ul class="versions">
@@ -136,7 +183,7 @@
   <button class="version-menu-toggle" title="Show other versions of page">antora-mermaid</button>
   <div class="version-menu">
     <a class="version is-current" href="antora-snippets.html">antora-mermaid</a>
-    <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
+    <a class="version" href="../v0.1/antora-snippets.html">v0.1</a>
   </div>
 </div>
 <div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/antora-snippets.adoc">Edit this Page</a></div>

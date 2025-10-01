@@ -4,11 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Page Not Found :: Formalhauthorized Docs</title>
-    <meta name="generator" content="Antora 3.1.12">
+    <meta name="generator" content="Antora 3.1.13">
     <link rel="stylesheet" href="/_/css/site.css">
   </head>
   <body class="status-404">
-<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; mermaid.initialize({"startOnLoad":true});</script><header class="header">
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  const packs = [{"name":"azure","url":"https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json"},{"name":"logos","url":"https://unpkg.com/@iconify-json/logos@1/icons.json"}].map(({ name, url }) => ({
+    name,
+    loader: () => fetch(url).then((res) => {
+      if (!res.ok) throw new Error(`Failed to load icon pack: ${name} (${res.status})`);
+      return res.json();
+    }),
+  }));
+  try {
+    // Mermaid >= 10.9: registerIconPacks exists. Older versions will just skip.
+    if (typeof mermaid.registerIconPacks === "function") {
+      mermaid.registerIconPacks(packs);
+    } else {
+      // Fallback: log a friendly hint.
+      console.warn("[antora-mermaid-iconpacks] mermaid.registerIconPacks() not found — is your Mermaid version new enough?");
+    }
+  } catch (e) {
+    console.error("[antora-mermaid-iconpacks] Failed to register icon packs:", e);
+  }
+</script>
+<header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://formalhauthorized.github.io">Formalhauthorized Docs</a>
@@ -53,6 +74,17 @@
 <div class="nav-panel-explore is-active" data-panel="explore">
   <ul class="components">
         <!-- components name with assets will be ignored -->
+      <li class="component">
+        <div class="title"><a href="/example-docs/antora-mermaid/index.html">Example Docs</a></div>
+        <ul class="versions">
+          <li class="version is-latest">
+            <a href="/example-docs/antora-mermaid/index.html">antora-mermaid</a>
+          </li>
+          <li class="version">
+            <a href="/example-docs/v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
       <li class="component">
         <div class="title"><a href="/technical-docs/antora-mermaid/index.html">Technical Docs</a></div>
         <ul class="versions">
