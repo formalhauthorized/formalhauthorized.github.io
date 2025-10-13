@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>example script to generate openapi json :: Formalhauthorized Docs</title>
+    <link rel="canonical" href="https://formalhauthorized.github.io/technical-docs/dev/example-openapi-script.html">
+    <meta name="generator" content="Antora 3.1.13">
+    <link rel="stylesheet" href="../../_/css/site.css">
+  </head>
+  <body class="article">
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  const packs = [{"name":"azure","url":"https://raw.githubusercontent.com/NakayamaKento/AzureIcons/refs/heads/main/icons.json"},{"name":"logos","url":"https://unpkg.com/@iconify-json/logos@1/icons.json"}].map(({ name, url }) => ({
+    name,
+    loader: () => fetch(url).then((res) => {
+      if (!res.ok) throw new Error(`Failed to load icon pack: ${name} (${res.status})`);
+      return res.json();
+    }),
+  }));
+  try {
+    // Mermaid >= 10.9: registerIconPacks exists. Older versions will just skip.
+    if (typeof mermaid.registerIconPacks === "function") {
+      mermaid.registerIconPacks(packs);
+    } else {
+      // Fallback: log a friendly hint.
+      console.warn("[antora-mermaid-iconpacks] mermaid.registerIconPacks() not found — is your Mermaid version new enough?");
+    }
+  } catch (e) {
+    console.error("[antora-mermaid-iconpacks] Failed to register icon packs:", e);
+  }
+</script>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://formalhauthorized.github.io">Formalhauthorized Docs</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="index.html">Home</a>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="_exports/index.pdf">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="body">
+<div class="nav-container" data-component="technical-docs" data-version="dev">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Technical Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Antora</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-docs.html">Antora Intro</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-ui.html">Antora UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-pages.html">Pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="antora-snippets.html">Antora snippets</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">asciidoc</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-primer.html">AsciiDoc primer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="asciidoc-stem.html">AsciiDoc for STEM</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">mermaid</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="use-mermaid.html">use mermaid</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mermaid-icons.html">mermaid with custom icons</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">openapi</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quarkus-openapi.html">Generate OpenAPI Documentation from Quarkus</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="example-openapi-script.html">example script to generate openapi json</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="openapi-generator-adoc.html">openapi generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="make-pdf.html">Make pdf</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Technical Docs</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+        <!-- components name with assets will be ignored -->
+      <li class="component">
+        <div class="title"><a href="../../example-docs/dev/index.html">Example Docs</a></div>
+        <ul class="versions">
+          <li class="version is-latest">
+            <a href="../../example-docs/dev/index.html">dev</a>
+          </li>
+          <li class="version">
+            <a href="../../example-docs/v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
+      <li class="component is-current">
+        <div class="title"><a href="index.html">Technical Docs</a></div>
+        <ul class="versions">
+          <li class="version is-current is-latest">
+            <a href="index.html">dev</a>
+          </li>
+          <li class="version">
+            <a href="../v0.1/index.html">v0.1</a>
+          </li>
+        </ul>
+      </li>
+  </ul>
+</div>
+
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Technical Docs</a></li>
+    <li>openapi</li>
+    <li><a href="example-openapi-script.html">example script to generate openapi json</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">dev</button>
+  <div class="version-menu">
+    <a class="version is-current" href="example-openapi-script.html">dev</a>
+    <a class="version is-missing" href="../v0.1/index.html">v0.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="file:///home/dev/genblog/antora-docs/technical-docs/modules/ROOT/pages/example-openapi-script.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">example script to generate openapi json</h1>
+<div class="paragraph">
+<p>I keep the up-to-date code in the main branch, but keep the documentation on a seperate branch.
+In that case to use the java&#8217;s openapi generation, I need the up-to-date code.
+One can achieve this using git worktree.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example code written by chatGPT to do that.</p>
+</div>
+<div class="listingblock">
+<div class="title">example script to generate openapi</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">#!/usr/bin/env bash
+set -euo pipefail
+
+# ---- config you can tweak ----------------------------------------------------
+MAIN_BRANCH="${MAIN_BRANCH:-main}"
+
+DOCS_BRANCH="${DOCS_BRANCH:-documentation}"
+
+MODULE="${MODULE:-mymodule}"
+
+# Path (from repo root) where ./mvnw lives (the Quarkus project root)
+# myproj/mymodule from the root of the repo
+PROJECT_DIR_REL="${PROJECT_DIR_REL:-myproj/$MODULE}"
+
+echo "${PROJECT_DIR_REL}"
+
+# Where Quarkus writes schemas (relative to each module/project dir)
+OPENAPI_DIRNAME="${OPENAPI_DIRNAME:-target/openapi}"
+
+# Destination on the docs branch (relative to repo root)
+OUT_DIR="${OUT_DIR:-documentation/generated_openapi}"
+
+# Extra Maven flags
+MVN_ARGS="${MVN_ARGS:--q -DskipTests}"
+# -----------------------------------------------------------------------------
+
+# Ensure we’re at repo root
+if [[ ! -d .git ]]; then
+  echo "Run this from the repository root (where .git exists)." &gt;&amp;2
+  exit 1
+fi
+
+# Ensure mvnw exists in the provided project dir (in the MAIN worktree we’ll build)
+if [[ ! -e "$PROJECT_DIR_REL" ]]; then
+  echo "Warning: '$PROJECT_DIR_REL' doesn't exist in the current checkout; that's ok (we'll use a worktree of $MAIN_BRANCH)." &gt;&amp;2
+fi
+
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [[ "$CURRENT_BRANCH" != "$DOCS_BRANCH" ]]; then
+  echo "Warning: you are on '$CURRENT_BRANCH', not '$DOCS_BRANCH'." &gt;&amp;2
+fi
+
+# # Avoid losing local changes
+# if ! git diff --quiet || ! git diff --cached --quiet; then
+#   echo "Please commit or stash your changes before running." &gt;&amp;2
+#   exit 1
+# fi
+
+# Prepare a temporary worktree for MAIN
+WT="$(mktemp -d -t openapi-main.XXXXXX)"
+cleanup() {
+  git worktree remove --force "$WT" &gt;/dev/null 2&gt;&amp;1 || true
+  rm -rf "$WT" || true
+}
+trap cleanup EXIT
+
+echo "-&gt; Adding worktree for '$MAIN_BRANCH' at $WT"
+# git fetch -q origin "$MAIN_BRANCH" || true
+git worktree add -f "$WT" "$MAIN_BRANCH" &gt;/dev/null
+
+# Verify mvnw in the worktree
+if [[ ! -x "$WT/$PROJECT_DIR_REL/mvnw" &amp;&amp; ! -x "$WT/$PROJECT_DIR_REL/./mvnw" ]]; then
+  if [[ -x "$WT/$PROJECT_DIR_REL/../mvnw" ]]; then
+    echo "Note: using mvnw at $(realpath "$WT/$PROJECT_DIR_REL/../mvnw")"
+  elif [[ -x "$WT/mvnw" ]]; then
+    echo "Note: using mvnw at repo root in worktree"
+  fi
+fi
+
+# Build to generate OpenAPI
+echo "-&gt; Building on $MAIN_BRANCH in '$PROJECT_DIR_REL' to generate OpenAPI schemas…"
+(
+  cd "$WT/$PROJECT_DIR_REL"
+  ./mvnw package $MVN_ARGS -Dquarkus.smallrye-openapi.store-schema-directory="$OPENAPI_DIRNAME"
+)
+
+# Collect schemas (supports single or multi-module under PROJECT_DIR_REL)
+echo "-&gt; Collecting schemas…"
+TMP_COLLECT="$(mktemp -d -t openapi-collect.XXXXXX)"
+# Look for any */target/openapi under the project path
+while IFS= read -r -d '' dir; do
+  # Module dir is the parent of target/, or the project dir itself for single-module
+  module_dir="$(dirname "$(dirname "$dir")")"
+  # Base name of the Quarkus project root (e.g., "templates" from "backend/templates")
+  base_name="$(basename "$PROJECT_DIR_REL")"
+
+  dest="$TMP_COLLECT"
+  mkdir -p "$dest"
+
+  cp "$dir"/openapi.json "$dest"/$base_name.json
+  cp "$dir"/openapi.yaml "$dest"/$base_name.yaml
+done &lt; &lt;(find "$WT/$PROJECT_DIR_REL" -type d -path "*/$OPENAPI_DIRNAME" -print0)
+
+# If nothing was found, fail clearly
+if [[ ! -d "$TMP_COLLECT" || -z "$(find "$TMP_COLLECT" -type f -maxdepth 2 2&gt;/dev/null)" ]]; then
+  echo "✗ No OpenAPI output found under '$PROJECT_DIR_REL/**/$OPENAPI_DIRNAME'. Did the Quarkus build produce schemas?" &gt;&amp;2
+  exit 2
+fi
+
+# Copy into docs branch destination
+echo "-&gt; Copying schemas into '$OUT_DIR' on branch '$CURRENT_BRANCH'…"
+mkdir -p "$OUT_DIR"
+cp -R "$TMP_COLLECT"/. "$OUT_DIR"/
+
+
+# Show what changed and commit (optional)
+echo "-&gt; Preview of changes:"
+git status --porcelain "$OUT_DIR" || true
+echo
+
+# MAIN_SHA="$(git -C "$WT" rev-parse --short HEAD)"
+# if [[ "${AUTO_COMMIT:-1}" == "1" ]]; then
+#   git add "$OUT_DIR"
+#   if ! git diff --cached --quiet; then
+#     git commit -m "docs: update OpenAPI schemas from ${MAIN_BRANCH}@${MAIN_SHA}"
+#     echo "✓ Committed schema updates to '$OUT_DIR'."
+#   else
+#     echo "✓ No changes to commit."
+#   fi
+# else
+#   echo "✓ Files staged in '$OUT_DIR' (AUTO_COMMIT=0). Review and commit as desired."
+# fi</code></pre>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
