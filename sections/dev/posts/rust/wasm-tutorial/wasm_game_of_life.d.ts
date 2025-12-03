@@ -1,12 +1,15 @@
 /* tslint:disable */
 /* eslint-disable */
+
 export enum Cell {
   Dead = 0,
   Alive = 1,
 }
+
 export class Universe {
   private constructor();
   free(): void;
+  [Symbol.dispose](): void;
   tick(): void;
   static new(): Universe;
   render(): string;
@@ -26,12 +29,13 @@ export interface InitOutput {
   readonly universe_width: (a: number) => number;
   readonly universe_height: (a: number) => number;
   readonly universe_cells: (a: number) => number;
-  readonly __wbindgen_export_0: WebAssembly.Table;
+  readonly __wbindgen_externrefs: WebAssembly.Table;
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_start: () => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;
+
 /**
 * Instantiates the given `module`, which can either be bytes or
 * a precompiled `WebAssembly.Module`.
